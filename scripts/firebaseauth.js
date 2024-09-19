@@ -30,6 +30,7 @@
     event.preventDefault();
     const email=document.getElementById('rEmail').value;
     const password=document.getElementById('rPassword').value;
+    const cnic=document.getElementById('rCnic').value;
     const firstName=document.getElementById('fName').value;
     const lastName=document.getElementById('lName').value;
 
@@ -42,7 +43,8 @@
         const userData={
             email: email,
             firstName: firstName,
-            lastName:lastName
+            lastName:lastName,
+            cnic: cnic
         };
         showMessage('Account Created Successfully', 'signUpMessage');
         const docRef=doc(db, "users", user.uid);
